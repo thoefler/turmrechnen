@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'turmrechnen';
+  startValue: any;
+  height: any;
+  result: any;
+
+  public calc(): any {
+    this.result = this.startValue * this.height;
+    return this.result;
+  }
+
+
 }
