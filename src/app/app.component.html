@@ -1,10 +1,14 @@
 <h1>Turmrechner</h1>
 
+<span>Start value:</span>
 <input type="number" [(ngModel)]="startValue">
 
-<input type="number" [(ngModel)]="height">
+<span>Height:</span>
+<input type="number" [(ngModel)]="height" (change)="checkHeight()">
 
-<button (click)="calc()">Calculate</button>
+<button (click)="calc()" [disabled]="!validHeight">Calculate</button>
+
+<h3 *ngIf="!validHeight">Height must be >= 2</h3>
 
 <h2>{{result}}</h2>
 

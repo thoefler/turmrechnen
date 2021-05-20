@@ -10,6 +10,7 @@ export class AppComponent {
   startValue: any;
   height: any;
   result: any;
+  validHeight = true;
 
   public calc(): any {
     this.result = this.startValue * this.height;
@@ -17,4 +18,11 @@ export class AppComponent {
   }
 
 
+  checkHeight(): any {
+    if (this.height >= 2) {
+      this.validHeight = true;
+    } else {
+      this.validHeight = false;
+    }
+  }
 }
